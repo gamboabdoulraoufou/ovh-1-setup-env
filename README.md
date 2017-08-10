@@ -9,11 +9,19 @@ This post show how to:
 ```sh
 # install module
 sudo pip install python-openstackclient
+```
 
-# configure open
+> Create openrc.sh file with the following parameters
 
-# source file (execute this command into file which contains your file or specify your path)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/openrc.png)
+
+
+> Source file (execute this command into file which contains your file or specify your path)
+
+```sh
 source openrc.sh
+```
+
 
 ## openrc.sh file contains something like this
 #!/bin/bash
