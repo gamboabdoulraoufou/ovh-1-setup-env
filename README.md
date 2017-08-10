@@ -15,14 +15,27 @@ sudo pip install python-openstackclient
 # source file (execute this command into file which contains your file or specify your path)
 source openrc.sh
 
+## openrc.sh file contains somthing like this
+#!/bin/bash
+export OS_AUTH_URL=https://auth.cloud.ovh.net/v2.0/
+export OS_TENANT_ID=xxxxxxxxxxx
+export OS_TENANT_NAME="xxxxxxxx"
+export OS_USERNAME="xxxxxxx"
+export OS_PASSWORD="xxxxxxxx"
+export OS_REGION_NAME="xxx"
+
 # list your instances for test
 nova list
 
+# you should see something like this
 +--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
 | ID                                   | Name  | Status | Task State | Power State | Networks                                           |
 +--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
-| 85ad671d-3831-4fbb-a239-7731d8f1d1c4 | hdp-1 | ACTIVE | -          | Running     | Ext-Net=145.239.155.75, 2001:41d0:401:2100::2:d5eb |
-| 25980044-d987-4458-ae2d-abfda659184a | hdp-2 | ACTIVE | -          | Running     | Ext-Net=145.239.155.76, 2001:41d0:401:2100::2:d5ec |
-| 25247c79-111b-4987-b506-d20d8c71c0f3 | hdp-3 | ACTIVE | -          | Running     | Ext-Net=145.239.155.78, 2001:41d0:401:2100::2:d5ed |
+| hhhdnss-eushzs-zeerz | instance-1 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
+| hhh23ss-eushzs-ze8rz | instance-2 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
+| hhhdnss-eushzs-zeern | instance-3 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
 +--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
 
+# nova net-list
+
+```
