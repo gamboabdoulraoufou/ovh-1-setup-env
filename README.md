@@ -15,7 +15,7 @@ sudo pip install python-openstackclient
 # source file (execute this command into file which contains your file or specify your path)
 source openrc.sh
 
-## openrc.sh file contains somthing like this
+## openrc.sh file contains something like this
 #!/bin/bash
 export OS_AUTH_URL=https://auth.cloud.ovh.net/v2.0/
 export OS_TENANT_ID=xxxxxxxxxxx
@@ -29,7 +29,7 @@ nova list
 
 # you should see something like this
 +--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
-| ID                                   | Name  | Status | Task State | Power State | Networks                                           |
+| ID                   | Name  | Status | Task State | Power State | Networks                                           |
 +--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
 | hhhdnss-eushzs-zeerz | instance-1 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
 | hhh23ss-eushzs-ze8rz | instance-2 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
