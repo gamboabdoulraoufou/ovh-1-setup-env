@@ -19,30 +19,24 @@ sudo pip install python-openstackclient
 > Source file (execute this command into file which contains your file or specify your path)
 
 ```sh
+# souce 
 source openrc.sh
+
 ```
 
+> check yout configuration
 
-## openrc.sh file contains something like this
-#!/bin/bash
-export OS_AUTH_URL=https://auth.cloud.ovh.net/v2.0/
-export OS_TENANT_ID=xxxxxxxxxxx
-export OS_TENANT_NAME="xxxxxxxx"
-export OS_USERNAME="xxxxxxx"
-export OS_PASSWORD="xxxxxxxx"
-export OS_REGION_NAME="xxx"
-
-# list your instances for test
+```sh
+# list your instances 
 nova list
 
-# you should see something like this
-+--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
-| ID                   | Name  | Status | Task State | Power State | Networks                                           |
-+--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
-| hhhdnss-eushzs-zeerz | instance-1 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
-| hhh23ss-eushzs-ze8rz | instance-2 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
-| hhhdnss-eushzs-zeern | instance-3 | ACTIVE | -          | Running     | Ext-Net=xxx.xxx.xxx.xx, xxxx:xxxx:xxx:xxxx::x:xxxx |
-+--------------------------------------+-------+--------+------------+-------------+----------------------------------------------------+
+# list networks
+```
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/list.png)
+
+
+
 
 # nova net-list
 
