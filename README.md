@@ -73,5 +73,5 @@ nova list
 neutron net-list
 ```
 
-![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/list2.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/list3.png)
 
