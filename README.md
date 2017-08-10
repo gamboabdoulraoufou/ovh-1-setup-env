@@ -9,6 +9,7 @@ This post show how to:
 
 Pre-requisites:
 - Python 2.7
+- Python-pip
 - root acces on your client
 - internet connexion
 
@@ -75,3 +76,47 @@ neutron net-list
 
 ![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/list3.png)
 
+
+> Create your Network (vRack in this case)
+
+
+> Attache network interface to existant VM
+
+```sh
+# attache network
+nova interface-attach --net-id b19cb941-xxxx-xxxx-xxxx-581e8e7e4f54 instance-id
+
+# check instance network
+nova list
+```
+
+
+> From your server, list IP adress
+```sh
+# list ip adress from 
+ip addr list
+```
+
+You should see 3 network inerfaces:
+o : Loopback
+eth0 : public interface
+eth1 : private interface
+
+
+> From your server, add VLAN IP adresse
+
+```sh
+# add private IP
+ip addr add 192.168.0.3/24 dev eth1
+
+# activate you IP
+ip link set eth1 up
+
+# check IP
+ip addr list
+```
+
+
+
+
+> Attache network interface to existant VM
