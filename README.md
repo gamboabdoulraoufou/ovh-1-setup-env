@@ -2,9 +2,9 @@
 
 
 This post show how to:
+- setup vRack (VLAN)
 - setup Openstack API to manage cloud ressources (instance, network, etc.)
-- setup 
-- 
+- assign private IP to a specific VM
 
 
 Pre-requisites:
@@ -13,6 +13,15 @@ Pre-requisites:
 - root acces on your client
 - internet connexion
 
+
+> Setup VLAN 
+
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/vlan0.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/vlan1.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/vlan2.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/vlan3.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/vlan4.png)
+![MetaStore remote database](https://github.com/gamboabdoulraoufou/ovh-1-setup-env/blob/master/img/vlan5.png)
 
 > Setup OpenStack command-line 
 
@@ -84,7 +93,7 @@ neutron net-list
 
 ```sh
 # attache network
-nova interface-attach --net-id b19cb941-xxxx-xxxx-xxxx-581e8e7e4f54 instance-id
+nova interface-attach 85ad671d-3831-4fbb-a239-7731d8f1d1c4 --net-id c0eb174d-b681-4059-a630-68b5cd810741 --fixed-ip 192.168.0.21
 
 # check instance network
 nova list
@@ -103,20 +112,13 @@ eth0 : public interface
 eth1 : private interface
 
 
-> From your server, add VLAN IP adresse
+> From your server, enable IP adress and check congif
 
 ```sh
-# add private IP
-ip addr add 192.168.0.3/24 dev eth1
-
-# activate you IP
+# enable network interface
 ip link set eth1 up
 
 # check IP
 ip addr list
 ```
 
-
-
-
-> Attache network interface to existant VM
